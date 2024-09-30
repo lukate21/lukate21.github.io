@@ -50,6 +50,8 @@ window.addEventListener('DOMContentLoaded', function(){
     var words = sentances[i].split('#');
     if(words[0] == type)
     {
+      words[1] = words[1].replace(/\n|\r|\s*/g, '');
+      words[2] = words[2].replace(/\n|\r|\s*/g, '');
       harmony.push(words[1]);
       harmony.push(words[2]);
     }
