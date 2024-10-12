@@ -106,3 +106,12 @@ color : #6E2C00;
   font-size : 14px;
   text-align: center;
 }
+
+#aside{
+  max-width: 100%;
+  max-height: 320px;
+}
+#bside{
+  max-width: 100%;
+  max-height: 320px;
+}

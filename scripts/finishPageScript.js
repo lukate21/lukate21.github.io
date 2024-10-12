@@ -93,6 +93,7 @@ window.addEventListener('DOMContentLoaded', function(){
 
   animElements = Array.prototype.slice.call( document.getElementsByClassName("scrollAnim") );
 
+  set_random_invitation_image();
 });
 
 document.addEventListener('scroll',checkScroll);
@@ -147,4 +148,20 @@ function copy(){
   document.execCommand('copy');
   document.body.removeChild(tempElem);
   alert("주소가 복사 됐습니다. 친구에게 공유해보세요!");
+}
+
+function getRandomInt(max) {
+  return Math.floor(Math.random() * max);
+}
+
+function set_random_invitation_image(){
+  var img_a = document.getElementById("aside");
+  var img_b = document.getElementById("bside");
+
+  const rand_int = getRandomInt(3);
+  let path_a = "images/invitations/"+rand_int+"_a.jpg";
+  let path_b = "images/invitations/"+rand_int+"_b.jpg";
+
+  img_a.setAttribute("src", path_a)
+  img_b.setAttribute("src", path_b)
 }
